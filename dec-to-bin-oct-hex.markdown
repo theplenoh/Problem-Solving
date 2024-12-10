@@ -1,5 +1,10 @@
 # DEC to BIN-OCT-HEX
 
+## Examples in Decimal Format
+```
+15, 255, 65535
+```
+
 ## DEC
 ```
 65535
