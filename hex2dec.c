@@ -33,6 +33,10 @@ int hex2dec(const char hex[])
 
 int main()
 {
-    printf("dec: %d\n", hex2dec("14A"));
+    char input[] = "";
+
+    scanf("%s", &input);
+
+    printf("%d", hex2dec(input));
     return 0;
 }
