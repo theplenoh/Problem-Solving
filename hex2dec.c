@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#define STR_SZ 10
+
 int power(int base, int exp)
 {
     int i;
@@ -33,9 +35,9 @@ int hex2dec(const char hex[])
 
 int main()
 {
-    char input[] = "";
+    char input[STR_SZ];
 
-    scanf("%s", &input);
+    scanf("%s", input);
 
     printf("%d", hex2dec(input));
     return 0;
