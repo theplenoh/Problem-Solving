@@ -3,10 +3,10 @@
 #define TRUE 1
 #define FALSE 0
 
-void eratos_sieve(const int MAX)
+void eratos_sieve(const int MAX, const int rangeM, const int rangeN)
 {
     int arr[MAX+1];
-    int i, j, cnt;
+    int i, j;
 
     // Fill `arr` with TRUEs
     for(i=0; i<=MAX; i++)
@@ -19,25 +19,24 @@ void eratos_sieve(const int MAX)
     {
         if(arr[i] == FALSE)
             continue;
-        arr[i] = TRUE;
+        arr[i] = i;
         for(j=2; i*j<=MAX; j++)
             arr[i*j] = FALSE;
     }
 
-    // Print what's in the first 10 array cells marked TRUE
-    for(i=0, cnt=1; cnt<=10 && i<=MAX; i++)
+    for(i=0; i<=MAX; i++)
     {
-        if(arr[i])
-        {
-            printf("%d ", i);
-            cnt++;
-        }
+        if((arr[i] != FALSE) && (rangeM <= arr[i] && arr[i] <= rangeN))
+            printf("%d\n", arr[i]);
     }
-    puts("");
 }
 
 int main()
 {
-    eratos_sieve(100);
+    int inputA, inputB;
+
+    scanf("%d %d", &inputA, &inputB);
+
+    eratos_sieve(1000000, inputA, inputB);
     return 0;
 }
