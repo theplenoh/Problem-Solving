@@ -4,33 +4,32 @@
 
 #define STR_LEN 64
 
+const char* hex[16] = {
+    "0000",
+    "0001",
+    "0010",
+    "0011",
+    "0100",
+    "0101",
+    "0110",
+    "0111",
+    "1000",
+    "1001",
+    "1010",
+    "1011",
+    "1100",
+    "1101",
+    "1110",
+    "1111"
+};
+
 void dec2bin(char* const, int);
 void str_reverse(char* const, const int);
 
 int main()
 {
     char result[STR_LEN];
-
     int input;
-
-    char hex[16][5];
-
-    strcpy(hex[0], "0000");
-    strcpy(hex[1], "0001");
-    strcpy(hex[2], "0010");
-    strcpy(hex[3], "0011");
-    strcpy(hex[4], "0100");
-    strcpy(hex[5], "0101");
-    strcpy(hex[6], "0110");
-    strcpy(hex[7], "0111");
-    strcpy(hex[8], "1000");
-    strcpy(hex[9], "1001");
-    strcpy(hex[10], "1010");
-    strcpy(hex[11], "1011");
-    strcpy(hex[12], "1100");
-    strcpy(hex[13], "1101");
-    strcpy(hex[14], "1110");
-    strcpy(hex[15], "1111");
 
     printf("input: ");
     scanf("%d", &input);
