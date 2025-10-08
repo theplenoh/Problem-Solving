@@ -2,7 +2,7 @@
 
 int fac_recur(int n)
 {
-    if (n == 1)
+    if (n <= 1)
         return 1;
     else
         return n * fac_recur(n - 1);
