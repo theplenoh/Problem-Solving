@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int fac_recur(int n)
+long long int fac_recur(long long int n)
 {
     if (n <= 1)
         return 1;
@@ -10,11 +10,11 @@ int fac_recur(int n)
 
 int main()
 {
-    int input;
+    long long int input;
 
-    scanf("%d", &input);
+    scanf("%lld", &input);
 
-    printf("%d\n", fac_recur(input));
+    printf("%lld", fac_recur(input));
 
     return 0;
 }
