@@ -27,7 +27,7 @@ void eratos_sieve(const int MAX, const int rangeM, const int rangeN)
     for(i=0; i<=MAX; i++)
     {
         if((arr[i] != FALSE) && (rangeM <= arr[i] && arr[i] <= rangeN))
-            printf("%d\n", arr[i]);
+            printf("%d ", arr[i]);
     }
 }
 
